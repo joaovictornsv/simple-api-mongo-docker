@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb'
 
 // Connection URL
-const url = 'mongodb://mongo:27017';
+const url = 'mongodb://mongo-container:27017';
 const client = new MongoClient(url);
 
 // Database Name

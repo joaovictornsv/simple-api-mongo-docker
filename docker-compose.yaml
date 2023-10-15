@@ -1,0 +1,19 @@
+services:
+  api:
+    build: .
+    ports:
+      - 3000:3000
+    networks:
+      - mongo-api-network
+
+  mongo:
+    image: mongo
+    container_name: mongo-container
+    ports:
+      - 27017:27017
+    networks:
+      - mongo-api-network
+
+networks:
+  mongo-api-network:
+    name: mongo-api-network
